@@ -9,7 +9,7 @@ public class TaskApp {
 		boolean quit = false; //prime the loop
 		
 		ArrayList<Task> taskList = new ArrayList<>();
-		taskList.add(new Task("Kathy", "Do the laundry", "4/10/15"));
+		taskList.add(new Task("Kathy", "Do the laundry", LocalDate.parse("2019-04-24")));
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -58,10 +58,10 @@ public class TaskApp {
 				System.out.println("Task Description:");
 				String desc = sc.nextLine(); //desc input
 				
-				System.out.println("Due Date:");
+				System.out.println("Due Date (YYYY-MM-DD):");
 				String date = sc.nextLine(); //date input
 				//LocalDate.parse(date)
-				taskList.add(new Task(name, desc, date));
+				taskList.add(new Task(name, desc, LocalDate.parse(date)));
 				
 				//Return to main menu prompt
 				System.out.println("");

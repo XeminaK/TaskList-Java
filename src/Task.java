@@ -1,15 +1,16 @@
+import java.time.LocalDate;
 
 public class Task {
 
 	//instance variables
 	private String name;
 	private String desc;
-	private String dueDate;
+	private LocalDate dueDate;
 	private boolean completed;
 	
 	
 	//constructor
-	public Task(String name, String desc, String dueDate) {
+	public Task(String name, String desc, LocalDate dueDate) {
 		this.name=name;
 		this.desc=desc;
 		this.dueDate=dueDate;
@@ -18,7 +19,7 @@ public class Task {
 	public Task() {
 		name = "";
 		desc = "";
-		dueDate = "";
+		dueDate = null;
 	}
 
 	//getters and setters for the above parameters (name, desc, dueDate, completed)
@@ -38,11 +39,11 @@ public class Task {
 		this.desc = desc;
 	}
 
-	public String getDueDate() {
+	public LocalDate getDueDate() {
 		return dueDate;
 	}
 
-	public void setDueDate(String dueDate) {
+	public void setDueDate(LocalDate dueDate) {
 		this.dueDate = dueDate;
 	}
 
