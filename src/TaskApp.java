@@ -60,8 +60,8 @@ public class TaskApp {
 				
 				System.out.println("Due Date:");
 				String date = sc.nextLine(); //date input
-				
-				taskList.add(new Task(name, desc, LocalDate.parse(date));
+				//LocalDate.parse(date)
+				taskList.add(new Task(name, desc, date));
 				
 				//Return to main menu prompt
 				System.out.println("");
@@ -75,11 +75,13 @@ public class TaskApp {
 				}
 			} else if (answer == 3) { //delete task
 				System.out.println("DELETE TASK");
+				System.out.println("");
 				//print out your current Array
 				int counter = 1;
 				for(Task t: taskList) {
 					System.out.println(counter++ + "." + t);
 				}
+				System.out.println("");
 				System.out.println("Which task would you like to delete? (Choose a number)");
 				int indexNumber = sc.nextInt(); //input for delete option
 				
@@ -118,6 +120,7 @@ public class TaskApp {
 				for(Task t: taskList) {
 					System.out.println(counter++ + "." + t);
 				}
+				System.out.println("");
 				System.out.println("Which task would you like to change to complete?(Choose a number)");
 				int indexNumber = sc.nextInt(); //input for change status option
 				//show the user which option they selected
