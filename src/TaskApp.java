@@ -82,8 +82,10 @@ public class TaskApp {
 					System.out.println(counter++ + "." + t);
 				}
 				System.out.println("");
-				System.out.println("Which task would you like to delete? (Choose a number)");
-				int indexNumber = sc.nextInt(); //input for delete option
+				//original line of code
+				//System.out.println("Which task would you like to delete? (Choose a number)");
+				//int indexNumber = sc.nextInt(); //input for delete option
+				int indexNumber = Validator.getIntInRange(sc, "Which task would you like to delete? (Choose a number)", 1, taskList.size());
 				
 				//show the user which option they selected
 				System.out.println("You have chosen the following task:");
@@ -121,8 +123,10 @@ public class TaskApp {
 					System.out.println(counter++ + "." + t);
 				}
 				System.out.println("");
-				System.out.println("Which task would you like to change to complete?(Choose a number)");
-				int indexNumber = sc.nextInt(); //input for change status option
+				//System.out.println("Which task would you like to change to complete?(Choose a number)");
+				//int indexNumber = sc.nextInt(); //input for change status option
+				
+				int indexNumber = Validator.getIntInRange(sc, "Which task would you like to change to complete?(Choose a number)", 1, taskList.size());
 				//show the user which option they selected
 				System.out.println("You have chosen the following task:");
 				System.out.println("");
