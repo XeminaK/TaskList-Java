@@ -34,6 +34,22 @@ public class Validator {
 
 	}
 	
+	//Validate the prompt for Y/N
+	public static String getString(Scanner scnr, String prompt) {
+		
+		System.out.println(prompt);
+		String ans = scnr.nextLine();
+		
+		while (true) {
+			if (ans.equalsIgnoreCase("Y") || ans.equalsIgnoreCase("N")) {
+				return ans;
+			} else {
+				scnr.nextLine();
+				System.out.println("Please enter Y or N");
+			}
+		}//end while loop
+	}
+	
 	//Loop method to validate integer to string
 	public static int getInt(Scanner scnr, String prompt) {
 		while (true) {
